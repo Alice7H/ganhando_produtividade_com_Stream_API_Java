@@ -11,7 +11,7 @@ public class CarrinhoDeCompras {
   public CarrinhoDeCompras() {
     this.itemList = new ArrayList<>();
   }
-  
+
   //método para calcular valor total dos itens sem utilizar o Stream API
   public double calcularValorTotal() {
     double valorTotal = 0d;
@@ -38,7 +38,7 @@ public class CarrinhoDeCompras {
   public CarrinhoDeCompras() {
     this.itemList = new ArrayList<>();
   }
-  
+
   //método para calcular valor total dos itens utilizando o Stream API
   public double calcularValorTotal() {
     if (itemList.isEmpty()) {
@@ -51,7 +51,7 @@ public class CarrinhoDeCompras {
 }
 ```
 - Combinada com as Expressões Lambda e Method reference, eles proporcionam uma forma diferente de lidar com conjuntos de elementos, oferecendo ao desenvolvedor uma maneira simples e concisa de escrever código que resulta em facilidade de manutenção e paralelização sem efeitos indesejados em tempo de execução.
-- As operações na Stream API podem ser classificadas em duas categorias principais: 
+- As operações na Stream API podem ser classificadas em duas categorias principais:
 1. Operações Intermediárias: são aquelas que retornam uma nova Stream e permitem encadear várias operações, formando um pipeline de processamento de dados. São elas:
 - `filter(Predicate<T> predicate)`: Filtra os elementos da Stream com base em um predicado. Retorna uma nova Stream contendo apenas os elementos que atendem ao critério do predicado.
 Exemplo: ` stream.filter(n -> n > 5)`
@@ -65,6 +65,7 @@ Exemplo: `stream.distinct()`
 Exemplo: stream.limit(10)
 - `skip(long n)`: Pula os primeiros n elementos da Stream e retorna uma nova Stream sem eles.
 Exemplo: `stream.skip(5)`
+
 2. Operações Terminais: são aquelas que encerram o pipeline e produzem um resultado final. São elas:
 - `forEach(Consumer<T> action)`: Executa uma ação para cada elemento da Stream.
 Exemplo: `stream.forEach(System.out::println)`
@@ -152,5 +153,3 @@ public class OrdenacaoPessoa {
 [2] "Java Collections API Examples - cami-la." GitHub. Disponível em: https://github.com/cami-la/collections-java-api-2023.
 
 [3] "Como usar funções functional_interface em Java - DevMedia." DevMedia. Disponível em: https://www.devmedia.com.br/como-usar-funcoes-lambda-em-java/32826.
-
-
